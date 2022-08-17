@@ -29,8 +29,8 @@ contract YourContract {
       emit RegisterBalance(msg.sender, _amount);
   }
 
-  function checkBalance(address _user) public view returns(uint256) {
-    return(balances[_user]);
+  function checkBalance() public view returns(uint256) {
+    return(balances[msg.sender]);
   }
 
   function getUserDetail(address _user) public view returns(string memory, uint256) {
