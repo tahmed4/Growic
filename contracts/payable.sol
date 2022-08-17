@@ -19,7 +19,7 @@ contract YourContract {
       emit RegisterBalance(msg.sender, msg.value);
   }
 
-  function checkBalance(address _user) public view returns(uint256) {
-    return(balances[_user]);
+  function checkBalance() public view returns(uint256) {
+    return(balances[msg.sender]);
   }
 }
